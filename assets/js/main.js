@@ -20,7 +20,7 @@ var boton = document.createElement('button');
  boton.addEventListener("click", function(){
 
   	var caja2 = document.createElement('div');//padre
- 	var titulo = document.createElement('p');
+ 	var titulo = document.createElement('li');
  	var lista = document.createTextNode(entrada.value);
  	var tarj = document.createElement('textArea');// hijo de div
  		tarj.setAttribute("placeholder","Añadir tarjeta");
