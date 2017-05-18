@@ -44,9 +44,18 @@ var caja2 = document.createElement('div');
 	    caja2.appendChild(tarjeta);
 	    tarjeta.appendChild(text1);
 
-	    
-	    
+	    caja2.removeChild(caja2.childNodes[2]);
 	    caja2.removeChild(caja2.childNodes[1]);
    	}
+});
 
+ btnTrj.addEventListener("click", function(){
+    
+		var tarjeta = document.createElement('div');
+	    var text1 = document.createTextNode(tarj.value);
+	    caja2.appendChild(tarjeta);
+	    tarjeta.appendChild(text1);
+	    
+	    caja2.removeChild(caja2.childNodes[2]);
+	    caja2.removeChild(caja2.childNodes[1]);
 });
