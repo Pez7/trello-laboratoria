@@ -7,7 +7,9 @@ var boton = document.createElement('button');
 	boton.setAttribute("id", "agr");
 var btnTrj = document.createElement('button');
 var tarj = document.createElement('textArea');
+	tarj.setAttribute("placeholder","Añadir tarjeta");
 var caja2 = document.createElement('div');
+	caja2.setAttribute("id","cajaDos");
 
 
  nuevaTarea.addEventListener("click", function(){
@@ -24,7 +26,6 @@ var caja2 = document.createElement('div');
 
   	var titulo = document.createElement('li');
  	var lista = document.createTextNode(entrada.value);
- 	 	tarj.setAttribute("placeholder","Añadir tarjeta");
  	var txt2 = document.createTextNode('Añadir');
 
  	caja.appendChild(caja2);
@@ -37,7 +38,15 @@ var caja2 = document.createElement('div');
  
  tarj.addEventListener("keyup", function(event){
     event.preventDefault();
-    if (event.keyCode == 13) {
-        caja2.removeChild(caja2.childNodes[2]);
-    }
+    if (event.keyCode == 13){
+		var tarjeta = document.createElement('div');
+	    var text1 = document.createTextNode(tarj.value);
+	    caja2.appendChild(tarjeta);
+	    tarjeta.appendChild(text1);
+
+	    
+	    
+	    caja2.removeChild(caja2.childNodes[1]);
+   	}
+
 });
