@@ -2,27 +2,34 @@ var nuevaTarea = document.getElementById("nueva-tarea");
 var contenedor = document.getElementById("contenedor");
 var caja = document.createElement('div');
 var entrada = document.createElement('input');
+	entrada.setAttribute("id","lista");
 var boton = document.createElement('button');
+	boton.setAttribute("id", "agr");
+
 
  nuevaTarea.addEventListener("click", function(){
-	/*var txt1 = document.createTextNode("")*/
-	var txt = document.createTextNode("Añadir tarea");
+ 	var texto = document.createTextNode("Guardar");
 
 	caja.appendChild(entrada);
 	caja.appendChild(boton);
 	contenedor.appendChild(caja);
-	boton.appendChild(txt);
+	boton.appendChild(texto);
 
 });
 
- boton.setAttribute("id","agregaTarea");
+ boton.addEventListener("click", function(){
+ 	var caja2 = document.createElement('div');
+ 	var tarj = document.createElement('textArea');
+ 		tarj.setAttribute("placeholder","Añadir tarjeta");
+ 	var boton = document.createElement('button');
+ 	var txt2 = document.createTextNode('Añadir');
+ 	entrada.value;
 
- var agrTarea = document.getElementById("agregarTarea");
+ 	caja.appendChild(entrada);
 
- 	agrTarea.addEventListener("click", function(){
- 		alert("Hola Mundo");
-
+ 	caja.appendChild(caja2);
+ 	caja2.appendChild(tarj);
+ 	caja2.appendChild(boton);
+ 	boton.appendChild(txt2);
  });
- entrada.value;
-
  
