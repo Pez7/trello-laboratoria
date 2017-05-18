@@ -5,6 +5,9 @@ var entrada = document.createElement('input');
 	entrada.setAttribute("id","lista");
 var boton = document.createElement('button');
 	boton.setAttribute("id", "agr");
+var btnTrj = document.createElement('button');
+var tarj = document.createElement('textArea');
+var caja2 = document.createElement('div');
 
 
  nuevaTarea.addEventListener("click", function(){
@@ -19,19 +22,22 @@ var boton = document.createElement('button');
 
  boton.addEventListener("click", function(){
 
-  	var caja2 = document.createElement('div');//padre
- 	var titulo = document.createElement('li');
+  	var titulo = document.createElement('li');
  	var lista = document.createTextNode(entrada.value);
- 	var tarj = document.createElement('textArea');// hijo de div
- 		tarj.setAttribute("placeholder","Añadir tarjeta");
- 	var boton = document.createElement('button');// hijo de div
+ 	 	tarj.setAttribute("placeholder","Añadir tarjeta");
  	var txt2 = document.createTextNode('Añadir');
 
  	caja.appendChild(caja2);
  	caja2.appendChild(titulo);
  	titulo.appendChild(lista);
  	caja2.appendChild(tarj);
- 	caja2.appendChild(boton);
- 	boton.appendChild(txt2);
+ 	caja2.appendChild(btnTrj);
+ 	btnTrj.appendChild(txt2);
  });
  
+ tarj.addEventListener("keyup", function(event){
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        caja2.removeChild(caja2.childNodes[2]);
+    }
+});
