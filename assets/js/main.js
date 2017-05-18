@@ -18,16 +18,18 @@ var boton = document.createElement('button');
 });
 
  boton.addEventListener("click", function(){
- 	var caja2 = document.createElement('div');
- 	var tarj = document.createElement('textArea');
- 		tarj.setAttribute("placeholder","Añadir tarjeta");
- 	var boton = document.createElement('button');
- 	var txt2 = document.createTextNode('Añadir');
- 	entrada.value;
 
- 	caja.appendChild(entrada);
+  	var caja2 = document.createElement('div');//padre
+ 	var titulo = document.createElement('p');
+ 	var lista = document.createTextNode(entrada.value);
+ 	var tarj = document.createElement('textArea');// hijo de div
+ 		tarj.setAttribute("placeholder","Añadir tarjeta");
+ 	var boton = document.createElement('button');// hijo de div
+ 	var txt2 = document.createTextNode('Añadir');
 
  	caja.appendChild(caja2);
+ 	caja2.appendChild(titulo);
+ 	titulo.appendChild(lista);
  	caja2.appendChild(tarj);
  	caja2.appendChild(boton);
  	boton.appendChild(txt2);
